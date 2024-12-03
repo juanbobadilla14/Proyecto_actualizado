@@ -16,7 +16,7 @@
 
 .fondo {
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)), 
-                url(/Proyecto_actualizado-main/view/imagenes/fondo3.jpg);
+                url(/client/view/imagenes/fondo3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -506,9 +506,38 @@ footer a:hover {
 
 .puntuacionP {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
+.puntuacionP h5 {
+    margin-inline-end: 2%;
+}
 
+.estrellas {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
+.estrellas input {
+    display: none;
+}
+
+.estrellas label {
+    float: right;
+    cursor: pointer;
+    color: #6b6464;
+    transition: color 0.3s;
+}
+
+.estrellas label:before {
+    content: '\2605';
+    font-size: 30px;
+}
+
+.estrellas input:checked ~ label,
+.estrellas label:hover,
+.estrellas label:hover ~ label {
+    color: #ffd700;
+    transition: color 0.3s;
+}
